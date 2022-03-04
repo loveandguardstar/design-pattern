@@ -1,28 +1,19 @@
-class Person {
-  constructor(name, age) {
-    this.name = name
-    this.age = age
-  }
 
-  getName() {
-    alert(`My name is ${this.name}, age is ${this.age}`)
-  }
+/* common.js 模块化
+  module.exports = 'name'
+  require('')
+*/
 
-  eat() {
-    alert(`${this.name} eat something`)
-  }
-}
+let loadImg = require('./promise')
 
-class Son extends Person {
-  constructor(name, age, number) {
-    super(name, age)
-    this.number = number
-  }
+let src = 'https://lupic.cdn.bcebos.com/20191203/3018932609_14.jpg'
+let result = loadImg(src)
+result.then((img) => {
+  alert(`width: ${img.width}`)
+  return img
+}).then((img) => {
+  alert(`height: ${img.height}`)
+}).catch(err => {
+  alert(err)
+})
 
-  getCode() {
-    alert(`My name is ${this.name}, My code is ${this.number}`)
-  }
-}
-
-let wang = new Son('wang', 16, 12)
-wang.getCode()
