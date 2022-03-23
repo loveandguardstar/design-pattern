@@ -16,3 +16,10 @@
 // }).catch(err => {
 //   alert(err)
 // })
+
+let Creator = require('./mode/factory')
+
+let creator = new Creator()
+let p1 = creator.create('hamburger')
+p1.init()
+p1.fun1()
