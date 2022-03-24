@@ -27,10 +27,20 @@
 // p1.fun1()
 
 // 2、单例模式
-let SingleObject = require('./mode/singleObject')
-let obj1 = SingleObject.getInstance()
-obj1.login()
-let obj2 = SingleObject.getInstance()
-obj2.login()
+// let SingleObject = require('./mode/singleObject')
+// let obj1 = SingleObject.getInstance()
+// obj1.login()
+// let obj2 = SingleObject.getInstance()
+// obj2.login()
 
-console.log('obj1 === obj2', obj1 === obj2);
+// console.log('obj1 === obj2', obj1 === obj2);
+
+// 3、适配器模式
+// let Adaptee = require('./mode/adaptee')
+// let newA = new Adaptee()
+// console.log(newA.request());
+
+// 4、装饰器模式
+// let Decorator = require('./mode/decorator')
+// let newA = new Decorator()
+// console.log(newA.request());
